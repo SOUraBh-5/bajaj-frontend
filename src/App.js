@@ -15,7 +15,7 @@ const App = () => {
         try {
             const jsonData = JSON.parse(inputData);
             console.log('Sending data to backend:', jsonData);
-            const result = await axios.post('http://localhost:4000/bfhl', jsonData);
+            const result = await axios.post('https://bajaj-backend-eluo.onrender.com/bfhl', jsonData);
             console.log('Received response from backend:', result.data);
             setResponse(result.data);
         } catch (err) {
